@@ -1,0 +1,1 @@
+{"mappings":"ACAA,GAAM,CAAE,IAAA,CAAG,CAAE,CAAG,QAEhB,EAAI","sources":["<anon>","src/index.js"],"sourcesContent":["const { log } = console;\nlog('123');\n\n//# sourceMappingURL=bapkim.02eab03c.js.map\n","const { log } = console;\n\nlog('123');\n"],"names":["log","console"],"version":3,"file":"bapkim.02eab03c.js.map"}

@@ -17,11 +17,20 @@ const compat = new FlatCompat({
 export default [
   pluginJs.configs.recommended,
   ...compat.extends('airbnb-base'),
-  { languageOptions: { globals: globals.node, ecmaVersion: 'latest' } },
+
+  {
+    languageOptions: {
+      ecmaVersion: 'latest',
+      globals: {
+        ...globals.node, // 기존 node 전역
+        ...globals.browser, // 추가: window, document 등 브라우저 전역
+      },
+    },
+  },
+
   {
     files: ['eslint.config.mjs'],
     rules: {
-      // eslint.config.js 파일에서만 'no-underscore-dangle' 규칙을 비활성화
       'no-underscore-dangle': 'off',
       'import/no-extraneous-dependencies': ['error', { packageDir: __dirname }],
     },
